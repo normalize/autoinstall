@@ -16,3 +16,5 @@ assert(require('debug'))
 assert(require('mocha'))
 assert(require('should'))
 assert('function', typeof require('type-is'))
+
+console.log('tests pass!!!')

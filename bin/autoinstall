@@ -1,0 +1,35 @@
+#!/usr/bin/env node
+
+var autoinstall = require.resolve('..')
+
+var args = process.argv.slice(2)
+
+var options = []
+args = args.filter(function (arg) {
+  if (arg[0] === '-') {
+    options.push(arg)
+    return false
+  }
+  return true
+})
+
+if (args.length > 1) {
+  throw new Error('more than 1 argument supplied')
+}
+
+var path = require('path')
+var file = path.resolve(args[0])
+
+options.push('-e',
+  "require('" + autoinstall + "');" +
+  "require('" + file + "');"
+)
+
+var spawn = require('child_process').spawn
+var proc = spawn('node', options, {
+  customFds: [0, 1, 2]
+})
+
+proc.on('exit', function (code) {
+  process.exit(code)
+})

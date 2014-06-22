@@ -17,7 +17,21 @@ But who knows when that's going to happen.
 This uses [`child_process.execFileSync()`](http://nodejs.org/docs/v0.11.13/api/child_process.html#child_process_child_process_execfilesync_command_args_options),
 so is only supported in node `>= v0.11.13`ish.
 
-## Usage
+## CLI Usage
+
+You can install `autoinstall` globally:
+
+```bash
+npm i -g autoinstall
+```
+
+Then use `autoinstall(1)` like `node(1)`:
+
+```bash
+autoinstall index.js
+```
+
+## API Usage
 
 ```bash
 npm i autoinstall
