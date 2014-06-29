@@ -31,6 +31,12 @@ Then use `autoinstall(1)` like `node(1)`:
 autoinstall index.js
 ```
 
+`autoinstall(1)` is also aliased as `a(1)`:
+
+```bash
+a index.js
+```
+
 ## API Usage
 
 ```bash
