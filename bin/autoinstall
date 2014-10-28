@@ -27,7 +27,7 @@ options.push('-e',
 
 var spawn = require('child_process').spawn
 var proc = spawn('node', options, {
-  customFds: [0, 1, 2]
+  stdio: [0, 1, 2]
 })
 
 proc.on('exit', function (code) {
