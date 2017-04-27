@@ -11,7 +11,7 @@
   "license": "MIT",
   "repository": "normalize/autoinstall",
   "dependencies": {
-    "debug": "2.6.4"
+    "debug": "2.6.5"
   },
   "scripts": {
     "test": "DEBUG=autoinstall node test/test.js"
